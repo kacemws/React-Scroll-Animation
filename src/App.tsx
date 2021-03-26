@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./Style/App.scss";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { Expo, Power1, ScrollTrigger } from "gsap/all";
+import { PageTitle } from "./Components/Typographie";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,18 +29,70 @@ function App() {
     //   opacity: 1,
     //   x: 400,
     // });
+
+    const tl = gsap.timeline();
+
+    tl.from(".intro-title", {
+      opacity: 0,
+      duration: 1.25,
+      ease: Power1.easeOut,
+      y: 50,
+      skewX: -5,
+      delay: 1,
+    })
+      .to(".intro-animation-inner", {
+        height: 0,
+        duration: 1.75,
+        ease: Expo.easeInOut,
+      })
+      .to(".intro-title .page-title", {
+        css: {
+          "mix-blend-mode": "normal",
+          color: "var(--text)",
+        },
+        duration: 1,
+        delay: -0.79,
+      })
+      .to(".landing-page", {
+        css: {
+          overflowY: "auto",
+        },
+        duration: 0,
+      });
   }, []);
   return (
-    <div
-      style={{
-        height: "100%",
-        width: "100vw",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <h1>Lets goo</h1>
+    <div className="landing-page">
+      <div className="intro">
+        {/*********************************************************/}
+
+        {/* the black screen covering the screen */}
+        <div className="intro-animation-wrapper">
+          <div className="intro-animation-inner"></div>
+        </div>
+        {/* the black screen covering the screen */}
+
+        {/*********************************************************/}
+
+        {/* the intro section */}
+        <div className="intro-container">
+          <div className="intro-content-wrapper">
+            <div className="intro-title">
+              <PageTitle>Your next big step</PageTitle>
+            </div>
+          </div>
+        </div>
+        {/* the intro section */}
+
+        {/*********************************************************/}
+      </div>
+      <div
+        className="newsletter"
+        style={{
+          height: "100vh",
+          width: "100%",
+          backgroundColor: "red",
+        }}
+      ></div>
     </div>
   );
 }
