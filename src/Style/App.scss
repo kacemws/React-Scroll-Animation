@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 :host {
   display: block;
 }
@@ -52,7 +53,9 @@
         z-index: 2;
         height: 150px;
         width: 150px;
-        margin: 0 auto;
+        position: absolute;
+        animation: 3s ease-in-out;
+        animation-iteration-count: infinite;
       }
 
       .info-right-part,
@@ -77,14 +80,37 @@
         width: 100%;
         .info-icon {
           &:first-child {
-            position: absolute;
-            top: 16%;
-            left: 25%;
+            left: 10%;
+            @include animation-keyframes {
+              0% {
+                top: 16%;
+              }
+              50% {
+                top: 17%;
+              }
+              100% {
+                top: 16%;
+              }
+            }
           }
           &:last-child {
-            position: absolute;
             top: 60%;
-            left: 10%;
+            left: 30%;
+
+            @include animation-keyframes {
+              0% {
+                transform: rotate(35deg);
+                opacity: 1;
+              }
+              50% {
+                opacity: 0.75;
+                transform: rotate(0deg);
+              }
+              100% {
+                opacity: 1;
+                transform: rotate(35deg);
+              }
+            }
           }
         }
       }
@@ -96,14 +122,40 @@
         width: 100%;
         .info-icon {
           &:first-child {
-            position: absolute;
             top: 22.5%;
             right: 10.5%;
+            @include animation-keyframes {
+              0% {
+                opacity: 0.75;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0.75;
+              }
+            }
           }
           &:last-child {
-            position: absolute;
             top: 65%;
             right: 45%;
+            @include animation-keyframes {
+              0% {
+                transform: rotate(20deg);
+                opacity: 0.75;
+              }
+              50% {
+                top: 60%;
+                height: 175px;
+                width: 175px;
+                opacity: 1;
+                transform: rotate(35deg);
+              }
+              100% {
+                opacity: 0.75;
+                transform: rotate(20deg);
+              }
+            }
           }
         }
       }

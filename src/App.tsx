@@ -107,7 +107,7 @@ function App() {
             <div className="intro-description">
               <Body>
                 KIO is an ecommerce ecosystem that helps both merchands and
-                their customers by providing top tiers solutions
+                their customers by providing top tier solutions
               </Body>
             </div>
           </div>
