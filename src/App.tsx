@@ -20,27 +20,53 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // gsap.to(".box2", {
-    //   scrollTrigger: {
-    //     // what div is the trigger for starting
-    //     trigger: ".box2",
-    //     // what div is the trigger for ending
-    //     // endTrigger: ".box3",
-    //     // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
-    //     toggleActions: "restart pause reverse reverse",
-    //     // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
-    //     start: "top center",
-    //     // precising when to end the animation, same thing as the start
-    //     end: "center top",
-    //     // visual indicator
-    //     markers: true,
-    //     // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
-    //     scrub: 1,
-    //   },
-    //   duration: 3,
-    //   opacity: 1,
-    //   x: 400,
-    // });
+    gsap.from(".signup-inner", {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".intro-description",
+        // what div is the trigger for ending
+        endTrigger: ".intro-description",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "center center",
+        // precising when to end the animation, same thing as the start
+        end: "center top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "form-container",
+      },
+      duration: 3,
+      opacity: 0,
+      // ease: Expo.easeInOut,
+      x: -200,
+    });
+
+    gsap.from(".signup-illustration", {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".intro-description",
+        // what div is the trigger for ending
+        endTrigger: ".intro-description",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "center center",
+        // precising when to end the animation, same thing as the start
+        end: "center top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "form-illustration",
+      },
+      duration: 3,
+      opacity: 0,
+      // ease: Power1.easeInOut,
+      x: 200,
+    });
 
     const tl = gsap.timeline();
 
@@ -72,6 +98,7 @@ function App() {
       .to(".landing-page", {
         css: {
           overflowY: "auto",
+          height: "fit-content",
         },
         duration: 0,
       });
@@ -150,7 +177,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="singup-illustration">
+        <div className="signup-illustration">
           <img src={hand} alt="hand" className="signup-illustration-inner" />
         </div>
       </div>
