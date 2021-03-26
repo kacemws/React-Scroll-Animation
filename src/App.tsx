@@ -10,7 +10,11 @@ function App() {
   useEffect(() => {
     gsap.to(".box2", {
       scrollTrigger: {
+        // what div is the trigger for starting
         trigger: ".box2",
+        // what div is the trigger for ending
+        // endTrigger: ".box3",
+
         // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
         toggleActions: "restart pause reverse reverse",
         // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
@@ -23,6 +27,7 @@ function App() {
         scrub: 1,
       },
       duration: 3,
+      opacity: 1,
       x: 400,
     });
   }, []);
@@ -65,6 +70,7 @@ function App() {
             height: 300,
             width: 300,
             backgroundColor: "green",
+            opacity: 0,
           }}
         ></div>
       </div>
