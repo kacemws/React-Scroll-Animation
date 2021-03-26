@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
 import "./Style/App.scss";
 import gsap from "gsap";
+import { Header } from "./Components/Header";
 import { Expo, Power1, ScrollTrigger } from "gsap/all";
-import { Body, PageTitle } from "./Components/Typographie";
+import {
+  Body,
+  Caption,
+  PageSubtitle,
+  PageTitle,
+} from "./Components/Typographie";
 
 import board from "./Assets/Images/icon-board.svg";
 import speaker from "./Assets/Images/icon-speaker.svg";
 import report from "./Assets/Images/icon-report.svg";
 import lamp from "./Assets/Images/icon-lamp.svg";
-import { Header } from "./Components/Header";
+import hand from "./Assets/Images/person-hand.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,12 +113,12 @@ function App() {
             <Header />
             <div className="intro-title">
               <PageTitle>
-                Use KIO and gain adventage over your competitors
+                Use KIO and gain advantage over your competitors
               </PageTitle>
             </div>
             <div className="intro-description">
               <Body>
-                KIO is an ecommerce ecosystem that helps both merchands and
+                KIO is an ecommerce ecosystem that helps both merchants and
                 their customers by providing top tier solutions
               </Body>
             </div>
@@ -122,14 +128,32 @@ function App() {
 
         {/*********************************************************/}
       </div>
-      <div
-        className="newsletter"
-        style={{
-          height: "100vh",
-          width: "100%",
-          backgroundColor: "red",
-        }}
-      ></div>
+
+      <div className="signup">
+        <div className="signup-inner">
+          <div className="signup-form">
+            <div className="signup-form-title">
+              <PageSubtitle>
+                Sign up and setup your store for free, forever !
+              </PageSubtitle>
+            </div>
+            <div className="signup-form-content">
+              <input className="signup-form-input" placeholder="Your email" />
+              <input
+                className="signup-form-submit"
+                value="Start now"
+                type="submit"
+              />
+            </div>
+            <div className="signup-form-caption">
+              <Caption>No billing information needed</Caption>
+            </div>
+          </div>
+        </div>
+        <div className="singup-illustration">
+          <img src={hand} alt="hand" className="signup-illustration-inner" />
+        </div>
+      </div>
     </div>
   );
 }
