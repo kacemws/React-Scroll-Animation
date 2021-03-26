@@ -1,3 +1,8 @@
+@import "./colors.scss";
+:host {
+  display: block;
+}
+
 @font-face {
   font-family: "averta";
   src: url("../Assets/Fonts/averta-regular.otf") format("woff"),
@@ -9,4 +14,8 @@
   src: url("../Assets/Fonts/averta-extrabold.otf") format("woff"),
     url("../Assets/Fonts/averta-extrabold.otf") format("opentype"),
     url("../Assets/Fonts/averta-extrabold.otf") format("truetype");
+}
+* {
+  font-family: "averta";
+  color: var(--text);
 }
