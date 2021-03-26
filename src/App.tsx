@@ -8,6 +8,7 @@ import board from "./Assets/Images/icon-board.svg";
 import speaker from "./Assets/Images/icon-speaker.svg";
 import report from "./Assets/Images/icon-report.svg";
 import lamp from "./Assets/Images/icon-lamp.svg";
+import { Header } from "./Components/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,6 +100,7 @@ function App() {
           </div>
 
           <div className="intro-content-wrapper">
+            <Header />
             <div className="intro-title">
               <PageTitle>
                 Use KIO and gain adventage over your competitors

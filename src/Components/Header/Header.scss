@@ -1,0 +1,14 @@
+@import "~sass-rem";
+:host {
+  display: block;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 100%;
+  background-color: red;
+  z-index: 1;
+}
