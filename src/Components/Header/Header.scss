@@ -9,6 +9,27 @@
   left: 0;
   height: 4rem;
   width: 100%;
-  background-color: red;
-  z-index: 1;
+  display: flex;
+
+  .header-logo {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    img {
+      height: 6rem;
+      margin: 0;
+      margin-left: 1rem;
+    }
+  }
+  .header-nav {
+    flex: 2;
+    height: 100%;
+    background-color: green;
+  }
+  .header-auth {
+    flex: 1;
+    height: 100%;
+    background-color: blue;
+  }
 }

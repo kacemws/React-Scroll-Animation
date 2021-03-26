@@ -59,6 +59,10 @@ function App() {
         duration: 1,
         delay: -0.9,
       })
+      .to(".intro-content-wrapper", {
+        position: "relative",
+        duration: 0,
+      })
       .to(".landing-page", {
         css: {
           overflowY: "auto",
