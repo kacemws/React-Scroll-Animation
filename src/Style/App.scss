@@ -38,7 +38,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: var(--neutral-600);
+        background-color: var(--text);
       }
     }
 
@@ -54,11 +54,22 @@
         align-items: center;
         justify-content: center;
 
-        .page-title {
-          display: inline-block;
-          z-index: 10;
-          color: var(--text-inverted);
-          mix-blend-mode: difference;
+        .intro-title {
+          .page-title {
+            display: inline-block;
+            z-index: 10;
+            color: var(--text-inverted);
+            mix-blend-mode: difference;
+            text-align: center;
+          }
+        }
+
+        .intro-description {
+          margin: 1.5rem 0 0 0;
+          width: 60%;
+          .body-text {
+            text-align: center;
+          }
         }
       }
     }

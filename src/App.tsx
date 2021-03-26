@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Style/App.scss";
 import gsap from "gsap";
 import { Expo, Power1, ScrollTrigger } from "gsap/all";
-import { PageTitle } from "./Components/Typographie";
+import { Body, PageTitle } from "./Components/Typographie";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +36,7 @@ function App() {
       opacity: 0,
       duration: 1.25,
       ease: Power1.easeOut,
-      y: 50,
+      y: 40,
       skewX: -5,
       delay: 1,
     })
@@ -51,7 +51,7 @@ function App() {
           color: "var(--text)",
         },
         duration: 1,
-        delay: -0.79,
+        delay: -0.9,
       })
       .to(".landing-page", {
         css: {
@@ -77,7 +77,16 @@ function App() {
         <div className="intro-container">
           <div className="intro-content-wrapper">
             <div className="intro-title">
-              <PageTitle>Your next big step</PageTitle>
+              <PageTitle>
+                Use KIO and gain adventage over your competitors
+              </PageTitle>
+            </div>
+            <div className="intro-description">
+              <Body>
+                KIO is an ecommerce ecosystem that helps both merchands and
+                their customers by providing top tiers solutions
+              </Body>
+              {/* <PageTitle>Your next big step</PageTitle> */}
             </div>
           </div>
         </div>
