@@ -4,6 +4,11 @@ import gsap from "gsap";
 import { Expo, Power1, ScrollTrigger } from "gsap/all";
 import { Body, PageTitle } from "./Components/Typographie";
 
+import board from "./Assets/Images/icon-board.svg";
+import speaker from "./Assets/Images/icon-speaker.svg";
+import report from "./Assets/Images/icon-report.svg";
+import lamp from "./Assets/Images/icon-lamp.svg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -67,7 +72,7 @@ function App() {
 
         {/* the black screen covering the screen */}
         <div className="intro-animation-wrapper">
-          <div className="intro-animation-inner"></div>
+          <div className="intro-animation-inner" />
         </div>
         {/* the black screen covering the screen */}
 
@@ -75,6 +80,24 @@ function App() {
 
         {/* the intro section */}
         <div className="intro-container">
+          <div className="info-right-part">
+            <div className="info-right-part-wrapper">
+              <div className="info-right-part-inner">
+                <img src={board} alt="icon" className="info-icon" />
+                <img src={speaker} alt="icon" className="info-icon" />
+              </div>
+            </div>
+          </div>
+
+          <div className="info-left-part">
+            <div className="info-left-part-wrapper">
+              <div className="info-left-part-inner">
+                <img src={report} alt="icon" className="info-icon" />
+                <img src={lamp} alt="icon" className="info-icon" />
+              </div>
+            </div>
+          </div>
+
           <div className="intro-content-wrapper">
             <div className="intro-title">
               <PageTitle>
@@ -86,7 +109,6 @@ function App() {
                 KIO is an ecommerce ecosystem that helps both merchands and
                 their customers by providing top tiers solutions
               </Body>
-              {/* <PageTitle>Your next big step</PageTitle> */}
             </div>
           </div>
         </div>
