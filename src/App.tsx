@@ -6,8 +6,10 @@ import { Expo, Power1, ScrollTrigger } from "gsap/all";
 import {
   Body,
   Caption,
+  Heading,
   PageSubtitle,
   PageTitle,
+  Title,
 } from "./Components/Typographie";
 
 import board from "./Assets/Images/icon-board.svg";
@@ -191,10 +193,39 @@ function App() {
               <PageTitle>Start free, then pay as you go</PageTitle>
             </div>
             <div className="pricing-showcase-content">
-              <div className="pricing-showcase-section"></div>
-              <div className="pricing-showcase-section"></div>
-              <div className="pricing-showcase-section"></div>
-              <div className="pricing-showcase-section"></div>
+              <div className="pricing-showcase-section">
+                <div className="pricing-showcase-section-title">
+                  <Heading>Starter</Heading>
+                </div>
+                <div className="pricing-showcase-section-features"></div>
+                <div className="pricing-showcase-section-button">
+                  <div className="pricing-showcase-section-button-inner">
+                    <Title>Learn more !</Title>
+                  </div>
+                </div>
+              </div>
+              <div className="pricing-showcase-section">
+                <div className="pricing-showcase-section-title">
+                  <Heading>Advanced</Heading>
+                </div>
+                <div className="pricing-showcase-section-features"></div>
+                <div className="pricing-showcase-section-button">
+                  <div className="pricing-showcase-section-button-inner">
+                    <Title>Learn more !</Title>
+                  </div>
+                </div>
+              </div>
+              <div className="pricing-showcase-section">
+                <div className="pricing-showcase-section-title">
+                  <Heading>Custom</Heading>
+                </div>
+                <div className="pricing-showcase-section-features"></div>
+                <div className="pricing-showcase-section-button">
+                  <div className="pricing-showcase-section-button-inner">
+                    <Title>Learn more !</Title>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
