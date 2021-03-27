@@ -250,29 +250,29 @@ function App() {
                 <div className="pricing-showcase-section-features"></div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
-                    <Title>Learn more !</Title>
+                    <Title>Free</Title>
                   </div>
                 </div>
               </div>
               <div className="pricing-showcase-section">
                 <div className="pricing-showcase-section-title">
-                  <Heading>Advanced</Heading>
+                  <Heading>Pro</Heading>
                 </div>
                 <div className="pricing-showcase-section-features"></div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
-                    <Title>Learn more !</Title>
+                    <Title>4.99$ / month</Title>
                   </div>
                 </div>
               </div>
               <div className="pricing-showcase-section">
                 <div className="pricing-showcase-section-title">
-                  <Heading>Custom</Heading>
+                  <Heading>Entreprise</Heading>
                 </div>
                 <div className="pricing-showcase-section-features"></div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
-                    <Title>Learn more !</Title>
+                    <Title>Custom</Title>
                   </div>
                 </div>
               </div>
