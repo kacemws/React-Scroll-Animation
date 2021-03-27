@@ -14,6 +14,8 @@ import board from "./Assets/Images/icon-board.svg";
 import speaker from "./Assets/Images/icon-speaker.svg";
 import report from "./Assets/Images/icon-report.svg";
 import lamp from "./Assets/Images/icon-lamp.svg";
+import mobileIcon from "./Assets/Images/icon-mobile.svg";
+import desktopIcon from "./Assets/Images/icon-desktop.svg";
 import hand from "./Assets/Images/person-hand.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -179,6 +181,16 @@ function App() {
         </div>
         <div className="signup-illustration">
           <img src={hand} alt="hand" className="signup-illustration-inner" />
+        </div>
+      </div>
+
+      <div className="pricing">
+        <div className="pricing-inner"></div>
+        <div className="pricing-illustrations">
+          <div className="pricing-illustrations-inner">
+            <img src={mobileIcon} alt="icon" className="info-icon" />
+            <img src={desktopIcon} alt="icon" className="info-icon" />
+          </div>
         </div>
       </div>
     </div>
