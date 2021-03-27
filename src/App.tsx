@@ -117,7 +117,7 @@ function App() {
       duration: 3,
       stagger: 2,
       opacity: 0,
-      delay: 1,
+      delay: 0.5,
       ease: Power1.easeInOut,
       y: -200,
     });
@@ -247,7 +247,15 @@ function App() {
                 <div className="pricing-showcase-section-title">
                   <Heading>Starter</Heading>
                 </div>
-                <div className="pricing-showcase-section-features"></div>
+                <div className="pricing-showcase-section-features">
+                  <Title>Manage products</Title>
+                  <Title>Handle orders</Title>
+                  <Title>Track analytics</Title>
+                  <Title>Create discounts</Title>
+                  <Title>Manage customers</Title>
+                  <Title>online store</Title>
+                  <Title>point of sale</Title>
+                </div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
                     <Title>Free</Title>
@@ -258,7 +266,11 @@ function App() {
                 <div className="pricing-showcase-section-title">
                   <Heading>Pro</Heading>
                 </div>
-                <div className="pricing-showcase-section-features"></div>
+                <div className="pricing-showcase-section-features">
+                  <Title>All free features +</Title>
+                  <Title>Marketing tool</Title>
+                  <Title>Social media</Title>
+                </div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
                     <Title>4.99$ / month</Title>
@@ -269,7 +281,10 @@ function App() {
                 <div className="pricing-showcase-section-title">
                   <Heading>Entreprise</Heading>
                 </div>
-                <div className="pricing-showcase-section-features"></div>
+                <div className="pricing-showcase-section-features">
+                  <Title>All pro features +</Title>
+                  <Title>custom support</Title>
+                </div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
                     <Title>Custom</Title>

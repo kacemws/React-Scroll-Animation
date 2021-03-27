@@ -313,7 +313,7 @@
             border-radius: 10px;
             background-color: var(--neutral-100);
             outline: 0;
-            opacity: 0.75;
+            // opacity: 0.75;
             padding: 1rem 0 0 0;
             display: flex;
             flex-direction: column;
@@ -323,9 +323,26 @@
               justify-content: center;
               align-items: center;
               flex: 0.5;
+              opacity: 0.75;
             }
             .pricing-showcase-section-features {
               flex: 3;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              padding: 0 1rem;
+              .title {
+                margin: 2px 0;
+                font-weight: 700;
+                opacity: 0.75;
+                &:first-child {
+                  margin-top: 4px;
+                }
+                &:last-child {
+                  margin-bottom: 4px;
+                }
+              }
             }
             .pricing-showcase-section-button {
               flex: 0.5;
@@ -333,7 +350,7 @@
               justify-content: center;
               align-items: center;
               .pricing-showcase-section-button-inner {
-                background-color: var(--primary-200);
+                background-color: var(--primary-300);
                 height: 2.5rem;
                 padding: 0 1.5rem;
                 display: flex;
