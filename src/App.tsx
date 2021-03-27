@@ -185,7 +185,19 @@ function App() {
       </div>
 
       <div className="pricing">
-        <div className="pricing-inner"></div>
+        <div className="pricing-inner">
+          <div className="pricing-showcase">
+            <div className="pricing-showcase-title">
+              <PageTitle>Start free, then pay as you go</PageTitle>
+            </div>
+            <div className="pricing-showcase-content">
+              <div className="pricing-showcase-section"></div>
+              <div className="pricing-showcase-section"></div>
+              <div className="pricing-showcase-section"></div>
+              <div className="pricing-showcase-section"></div>
+            </div>
+          </div>
+        </div>
         <div className="pricing-illustrations">
           <div className="pricing-illustrations-inner">
             <img src={mobileIcon} alt="icon" className="info-icon" />
