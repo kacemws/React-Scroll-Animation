@@ -301,6 +301,12 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div className="products pos"></div>
+      <div className="products web"></div>
+      <div className="products dash"></div>
+
+      <div className="newsletter"></div>
     </div>
   );
 }
