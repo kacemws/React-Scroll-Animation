@@ -20,6 +20,10 @@ import mobileIcon from "./Assets/Images/icon-mobile.svg";
 import desktopIcon from "./Assets/Images/icon-desktop.svg";
 import hand from "./Assets/Images/person-hand.png";
 
+import mobile from "./Assets/Images/person-mobile.svg";
+import web from "./Assets/Images/person-desktop.svg";
+import dash from "./Assets/Images/Editable-site.svg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -302,9 +306,73 @@ function App() {
         </div>
       </div>
 
-      <div className="products pos"></div>
-      <div className="products web"></div>
-      <div className="products dash"></div>
+      <div className="products">
+        <div className="product-illustration">
+          <img
+            src={mobile}
+            alt="product illustration"
+            className="product-illustration-img"
+          />
+        </div>
+        <div className="product-details start">
+          <div className="product-title">
+            <PageTitle>Designed to save your time.</PageTitle>
+          </div>
+          <div className="product-description">
+            <Body>
+              Use Kiosk and take your physical store to the next level.
+            </Body>
+          </div>
+          <div className="product-description">
+            <Body>
+              Offline. Online. Kiosk offers you multiple functionnalities
+            </Body>
+          </div>
+        </div>
+      </div>
+      <div className="products">
+        <div className="product-details end">
+          <div className="product-title">
+            <PageTitle>
+              Boost your sales and elevate to the next level.
+            </PageTitle>
+          </div>
+          <div className="product-description">
+            <Body>
+              With our dashboard, kio offers you all what you need to start your
+              journey
+            </Body>
+          </div>
+        </div>
+
+        <div className="product-illustration">
+          <img
+            src={web}
+            alt="product illustration"
+            className="product-illustration-img"
+          />
+        </div>
+      </div>
+      <div className="products vertical">
+        <div className="product-details vertical">
+          <div className="product-title">
+            <PageTitle>Free. Highly customisable. Simple to use.</PageTitle>
+          </div>
+          <div className="product-description">
+            <Body>
+              A modern. Customisable. Free forever online store where you can
+              sell and promote all your products
+            </Body>
+          </div>
+        </div>
+        <div className="product-illustration vertical">
+          <img
+            src={dash}
+            alt="product illustration"
+            className="product-illustration-img"
+          />
+        </div>
+      </div>
 
       <div className="newsletter"></div>
     </div>

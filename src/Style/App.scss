@@ -419,19 +419,84 @@
   .products {
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.vertical {
+      flex-direction: column;
+      .product-illustration,
+      .product-details {
+        width: 100%;
+        height: 80%;
+      }
+      .product-details {
+        height: 20%;
+        align-items: center;
+        .product-title {
+          text-align: center;
+        }
+        .product-description {
+          width: 65%;
+          text-align: center;
+        }
+      }
+    }
+    .product-illustration {
+      height: 100%;
+      width: 50%;
+      .product-illustration-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .product-details {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0;
+
+      &.start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      &.end {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        .product-description {
+          padding-right: 4rem;
+        }
+      }
+      .product-title {
+        width: 90%;
+        .page-title {
+          font-size: 3.5rem;
+          line-height: 3.75rem;
+        }
+      }
+      .product-description {
+        width: 90%;
+        margin: 1rem 0;
+        margin-bottom: 0.5rem;
+        &:last-child {
+          margin-top: 0;
+        }
+        &:nth-child(2) {
+          margin-top: 1rem;
+        }
+      }
+    }
   }
   .newsletter {
     height: 50vh;
     width: 100%;
     background-color: burlywood;
-  }
-  .pos {
-    background-color: red;
-  }
-  .web {
-    background-color: blue;
-  }
-  .dash {
-    background-color: green;
   }
 }
