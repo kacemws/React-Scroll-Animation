@@ -152,6 +152,32 @@ function App() {
       ease: Expo.easeIn,
     });
 
+    gsap.from([".web"], {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".web-section",
+        // what div is the trigger for ending
+        endTrigger: ".pos-section",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "top center",
+        // precising when to end the animation, same thing as the start
+        end: "bottom top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "web-section-animation",
+      },
+      duration: 2,
+      stagger: 2,
+      opacity: 0,
+      delay: -1,
+      y: 50,
+      ease: Expo.easeIn,
+    });
+
     const tl = gsap.timeline();
 
     tl.from(".intro-title", {
