@@ -311,7 +311,7 @@ function App() {
           <img
             src={mobile}
             alt="product illustration"
-            className="product-illustration-img"
+            className="product-illustration-img center"
           />
         </div>
         <div className="product-details start">
