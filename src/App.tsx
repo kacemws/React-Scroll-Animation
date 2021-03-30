@@ -25,6 +25,11 @@ import mobile from "./Assets/Images/person-mobile.svg";
 import web from "./Assets/Images/person-desktop.svg";
 import dash from "./Assets/Images/Editable-site.svg";
 
+import women1 from "./Assets/Images/women-1.png";
+import women2 from "./Assets/Images/women-2.png";
+import men1 from "./Assets/Images/men-1.png";
+import men2 from "./Assets/Images/men-2.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -543,6 +548,30 @@ function App() {
               alt="handshake"
               className="newsletter-illustration-inner"
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="community">
+        <div className="community-title">
+          <PageTitle>
+            What are you waiting for?
+            <br />
+            Join our community
+          </PageTitle>
+        </div>
+        <div className="community-people">
+          <div className="community-person">
+            <img src={women1} alt="person" />
+          </div>
+          <div className="community-person">
+            <img src={men1} alt="person" />
+          </div>
+          <div className="community-person">
+            <img src={women2} alt="person" />
+          </div>
+          <div className="community-person">
+            <img src={men2} alt="person" />
           </div>
         </div>
       </div>
