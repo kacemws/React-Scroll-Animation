@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Style/App.scss";
 import gsap from "gsap";
 import { Header } from "./Components/Header";
-import { Expo, Power1, ScrollTrigger } from "gsap/all";
+import { Expo, Power1, Power3, ScrollTrigger } from "gsap/all";
 import {
   Body,
   Caption,
@@ -85,14 +85,14 @@ function App() {
         // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
         toggleActions: "restart pause reverse reverse",
         // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
-        start: "end center",
+        start: "bottom center",
         // precising when to end the animation, same thing as the start
         end: "center top",
         // visual indicator
         // markers: true,
         // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
         scrub: 1,
-        id: "pricing-animation",
+        id: "pricing-title-animation",
       },
       duration: 3,
       opacity: 0,
@@ -109,21 +109,47 @@ function App() {
         // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
         toggleActions: "restart pause reverse reverse",
         // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
-        start: "end center",
+        start: "bottom center",
         // precising when to end the animation, same thing as the start
         end: "center top",
         // visual indicator
         // markers: true,
         // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
         scrub: 1,
-        id: "pricing-animation",
+        id: "pricing-section-animation",
       },
       duration: 3,
       stagger: 2,
       opacity: 0,
       delay: 0.5,
-      ease: Power1.easeInOut,
+      ease: Power3.easeInOut,
       y: -200,
+    });
+
+    gsap.from([".pos"], {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".pricing",
+        // what div is the trigger for ending
+        // endTrigger: ".intro-description",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "bottom center",
+        // precising when to end the animation, same thing as the start
+        // end: "center top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "mobile-section-animation",
+      },
+      duration: 3,
+      stagger: 2,
+      opacity: 0,
+      delay: 0.5,
+      y: 50,
+      ease: Expo.easeIn,
     });
 
     const tl = gsap.timeline();
@@ -306,7 +332,7 @@ function App() {
         </div>
       </div>
 
-      <div className="products">
+      <div className="products mobile-section">
         <div className="product-illustration">
           <img
             src={mobile}
@@ -314,30 +340,30 @@ function App() {
             className="product-illustration-img center"
           />
         </div>
-        <div className="product-details start">
-          <div className="product-title">
+        <div className="product-details">
+          <div className="product-title pos">
             <PageTitle>Designed to save your time.</PageTitle>
           </div>
-          <div className="product-description">
+          <div className="product-description pos">
             <Body>
               Use Kiosk and take your physical store to the next level.
             </Body>
           </div>
-          <div className="product-description">
+          <div className="product-description pos">
             <Body>
               Offline. Online. Kiosk offers you multiple functionnalities
             </Body>
           </div>
         </div>
       </div>
-      <div className="products">
-        <div className="product-details end">
-          <div className="product-title">
+      <div className="products web-section">
+        <div className="product-details">
+          <div className="product-title web">
             <PageTitle>
               Boost your sales and elevate to the next level.
             </PageTitle>
           </div>
-          <div className="product-description">
+          <div className="product-description web">
             <Body>
               With our dashboard, kio offers you all what you need to start your
               journey
@@ -349,7 +375,7 @@ function App() {
           <img
             src={web}
             alt="product illustration"
-            className="product-illustration-img"
+            className="product-illustration-img top"
           />
         </div>
       </div>
