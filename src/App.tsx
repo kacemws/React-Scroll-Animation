@@ -19,6 +19,7 @@ import lamp from "./Assets/Images/icon-lamp.svg";
 import mobileIcon from "./Assets/Images/icon-mobile.svg";
 import desktopIcon from "./Assets/Images/icon-desktop.svg";
 import hand from "./Assets/Images/person-hand.png";
+import handshake from "./Assets/Images/person-handshake.png";
 
 import mobile from "./Assets/Images/person-mobile.svg";
 import web from "./Assets/Images/person-desktop.svg";
@@ -452,7 +453,31 @@ function App() {
         </div>
       </div>
 
-      <div className="newsletter"></div>
+      <div className="newsletter">
+        <div className="newsletter-inner">
+          <div className="newsletter-form-title">
+            <PageSubtitle>
+              Get updated about products, news, tips and offers from Kio,
+              <br /> we ensure you, quality over quantity
+            </PageSubtitle>
+          </div>
+          <div className="newsletter-form-content">
+            <input className="newsletter-form-input" placeholder="Your email" />
+            <input
+              className="newsletter-form-submit"
+              value="Subscribe"
+              type="submit"
+            />
+          </div>
+          <div className="newsletter-illustration">
+            <img
+              src={handshake}
+              alt="handshake"
+              className="newsletter-illustration-inner"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
