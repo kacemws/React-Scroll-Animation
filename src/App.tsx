@@ -119,12 +119,11 @@ function App() {
         scrub: 1,
         id: "pricing-section-animation",
       },
-      duration: 3,
-      stagger: 2,
+      duration: 6,
+      stagger: 3,
       opacity: 0,
       delay: 0.5,
-      ease: Power3.easeInOut,
-      y: -200,
+      y: -100,
     });
 
     gsap.from([".pos"], {
@@ -150,33 +149,31 @@ function App() {
       opacity: 0,
       delay: 0.5,
       y: 50,
-      ease: Expo.easeIn,
     });
 
     gsap.from([".web"], {
       scrollTrigger: {
         // what div is the trigger for starting
-        trigger: ".web-section",
+        trigger: ".product-description.pos.web-marker",
         // what div is the trigger for ending
-        endTrigger: ".pos-section",
+        endTrigger: ".web-section",
         // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
         toggleActions: "restart pause reverse reverse",
         // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
-        start: "top center",
+        start: "top top+=20%",
         // precising when to end the animation, same thing as the start
-        end: "bottom top",
+        end: "top top",
         // visual indicator
         // markers: true,
         // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
         scrub: 1,
         id: "web-section-animation",
       },
-      duration: 2,
+      duration: 3,
       stagger: 2,
       opacity: 0,
-      delay: -1,
+      delay: 0.5,
       y: 50,
-      ease: Expo.easeIn,
     });
 
     gsap.from([".dash"], {
@@ -202,7 +199,6 @@ function App() {
       opacity: 0,
       delay: -1,
       y: 50,
-      ease: Expo.easeIn,
     });
 
     const tl = gsap.timeline();
@@ -402,7 +398,7 @@ function App() {
               Use Kiosk and take your physical store to the next level.
             </Body>
           </div>
-          <div className="product-description pos">
+          <div className="product-description pos web-marker">
             <Body>
               Offline. Online. Kiosk offers you multiple functionnalities
             </Body>
