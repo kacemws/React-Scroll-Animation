@@ -194,11 +194,83 @@ function App() {
         scrub: 1,
         id: "dash-section-animation",
       },
-      duration: 2,
+      duration: 3,
       stagger: 2,
       opacity: 0,
-      delay: -1,
+      delay: 0.5,
       y: 50,
+    });
+
+    gsap.from(".newsletter-form-title", {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".product-description.dash",
+        // what div is the trigger for ending
+        // endTrigger: ".pos-section",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "bottom top",
+        // precising when to end the animation, same thing as the start
+        // end: "bottom top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "newsletter-title-animation",
+      },
+      duration: 3,
+      opacity: 0,
+      delay: 0.5,
+      y: 50,
+    });
+
+    gsap.from(".newsletter-form-input", {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".product-description.dash",
+        // what div is the trigger for ending
+        // endTrigger: ".pos-section",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "bottom top",
+        // precising when to end the animation, same thing as the start
+        // end: "bottom top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "newsletter-title-animation",
+      },
+      duration: 3,
+      opacity: 0,
+      delay: 0.5,
+      x: -50,
+    });
+
+    gsap.from(".newsletter-form-submit", {
+      scrollTrigger: {
+        // what div is the trigger for starting
+        trigger: ".product-description.dash",
+        // what div is the trigger for ending
+        // endTrigger: ".pos-section",
+        // entering - leaving - entering again backwards -when scrolling all the way back past the beginning
+        toggleActions: "restart pause reverse reverse",
+        // precising when to start the animation, or at which point, its a couple (position in the box, position in the viewpage), in our exemple : when the (top of the box, hits the center of page)
+        start: "bottom top",
+        // precising when to end the animation, same thing as the start
+        // end: "bottom top",
+        // visual indicator
+        // markers: true,
+        // the animation follows the cursor progression over the box, it doesn't just autoplay, true means without delay, a number is the delay in seconds
+        scrub: 1,
+        id: "newsletter-title-animation",
+      },
+      duration: 3,
+      opacity: 0,
+      delay: 0.5,
+      x: 50,
     });
 
     const tl = gsap.timeline();
