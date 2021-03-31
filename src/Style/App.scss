@@ -359,7 +359,7 @@
           justify-content: space-evenly;
           .pricing-showcase-section {
             height: 100%;
-            max-height: 26rem;
+            max-height: 29rem;
             flex: 1;
             margin: 0 1rem;
             border: 2px solid rgba(225, 225, 225, 0.75);
@@ -372,6 +372,7 @@
             flex-direction: column;
             cursor: pointer;
 
+            max-width: 16rem;
             @include media("<=desktop") {
               max-height: 23rem;
             }
