@@ -1,4 +1,6 @@
 @import "~sass-rem";
+@import "../../Style/breakpoints.scss";
+
 :host {
   display: block;
 }
@@ -8,6 +10,10 @@
   font-size: 4rem;
   font-weight: 700;
   line-height: 4.5rem;
+  @include media("<=desktop") {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 
 .page-subtitle {
@@ -15,6 +21,10 @@
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.5rem;
+  @include media("<=desktop") {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .heading {
@@ -23,19 +33,27 @@
   font-weight: 700;
   line-height: 1.75rem;
   color: var(--neutral-600);
+  @include media("<=desktop") {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
-.subheading {
-  font-family: inherit;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1rem;
-}
+// .subheading {
+//   font-family: inherit;
+//   font-size: 0.75rem;
+//   font-weight: 600;
+//   line-height: 1rem;
+// }
 
 .title {
   font-family: inherit;
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.75rem;
+  @include media("<=desktop") {
+    font-size: 0.95rem;
+    line-height: 1.55rem;
+  }
 }
 .body-text {
   font-family: inherit;
@@ -43,6 +61,10 @@
   opacity: 0.75;
   font-weight: 400;
   line-height: 2.25rem;
+  @include media("<=desktop") {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+  }
 }
 .caption {
   font-family: inherit;
@@ -50,4 +72,8 @@
   font-weight: 400;
   line-height: 1.25rem;
   opacity: 0.75;
+  @include media("<=desktop") {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }

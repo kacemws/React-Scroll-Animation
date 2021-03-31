@@ -406,13 +406,13 @@ function App() {
                   <Heading>Starter</Heading>
                 </div>
                 <div className="pricing-showcase-section-features">
-                  <Title>Manage products</Title>
+                  <Title>Handle products</Title>
                   <Title>Handle orders</Title>
-                  <Title>Track analytics</Title>
-                  <Title>Create discounts</Title>
-                  <Title>Manage customers</Title>
-                  <Title>online store</Title>
-                  <Title>point of sale</Title>
+                  <Title>Track reports</Title>
+                  <Title>Handle discounts</Title>
+                  <Title>Handle customers</Title>
+                  <Title>Online store</Title>
+                  <Title>Point of sale</Title>
                 </div>
                 <div className="pricing-showcase-section-button">
                   <div className="pricing-showcase-section-button-inner">
