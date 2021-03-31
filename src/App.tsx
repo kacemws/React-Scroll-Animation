@@ -27,8 +27,10 @@ import dash from "./Assets/Images/Editable-site.svg";
 
 import women1 from "./Assets/Images/women-1.png";
 import women2 from "./Assets/Images/women-2.png";
+import women3 from "./Assets/Images/women-3.png";
 import men1 from "./Assets/Images/men-1.png";
 import men2 from "./Assets/Images/men-2.png";
+import men3 from "./Assets/Images/men-3.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -572,6 +574,12 @@ function App() {
           </div>
           <div className="community-person">
             <img src={men2} alt="person" />
+          </div>
+          <div className="community-person">
+            <img src={women3} alt="person" />
+          </div>
+          <div className="community-person">
+            <img src={men3} alt="person" />
           </div>
         </div>
       </div>
