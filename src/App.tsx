@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Style/App.scss";
 import gsap from "gsap";
 import { Header } from "./Components/Header";
-import { Expo, Power1, Power3, ScrollTrigger } from "gsap/all";
+import { Expo, Power1, ScrollTrigger } from "gsap/all";
 import {
   Body,
   Caption,

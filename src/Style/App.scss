@@ -560,14 +560,13 @@
     }
   }
   .community {
-    height: 75vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     // justify-content: space-between;
     .community-title {
       width: 60%;
-      margin: 2rem auto;
+      margin: 1rem auto;
       // margin-top: 1rem;
       .page-title {
         text-align: center;
@@ -575,10 +574,10 @@
     }
     .community-people {
       width: 100%;
-      height: 60%;
+      height: 45vh;
       display: flex;
+      justify-content: space-evenly;
       .community-person {
-        flex: 1;
         height: 100%;
         img {
           height: 100%;
