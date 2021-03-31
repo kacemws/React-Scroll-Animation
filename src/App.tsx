@@ -575,6 +575,34 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="footer">
+        <div className="footer-inner">
+          <div className="footer-logo">
+            <img
+              src="https://cdn.kiostore.net/file/kiostore/KIO+.svg"
+              alt="logo"
+            />
+            <Title>Copyright © 2021 KIO</Title>
+
+            <Title>All rights Reserved</Title>
+          </div>
+          <div className="footer-sections">
+            <div className="footer-section">
+              <Heading>Follow us</Heading>
+              <Title>Twitter</Title>
+              <Title>Github</Title>
+              <Title>Medium</Title>
+              <Title>Instagram</Title>
+              <Title>Facebook</Title>
+            </div>
+            <div className="footer-section">
+              <Heading>Join</Heading>
+              <Title>Sign in</Title>
+              <Title>Get started</Title>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
