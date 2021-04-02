@@ -1,4 +1,5 @@
 @import "~sass-rem";
+@import "../../Style/breakpoints.scss";
 :host {
   display: block;
 }
@@ -10,6 +11,12 @@
   height: 4rem;
   width: 100%;
   display: flex;
+  @include media("<=790px") {
+    .title {
+      font-size: 0.9rem;
+      line-height: 1.15rem !important;
+    }
+  }
 
   .header-logo {
     flex: 1;
