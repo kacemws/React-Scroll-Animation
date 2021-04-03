@@ -11,12 +11,6 @@
   height: 4rem;
   width: 100%;
   display: flex;
-  // @include media("<=790px") {
-  //   .title {
-  //     font-size: 0.9rem;
-  //     line-height: 1.15rem !important;
-  //   }
-  // }
 
   .header-logo {
     flex: 1;
@@ -30,6 +24,9 @@
     }
   }
   .header-nav {
+    @include media("<=phone") {
+      display: none;
+    }
     flex: 2;
     height: 100%;
     nav {
@@ -66,8 +63,19 @@
       display: flex;
       background-color: var(--primary-300);
       align-items: center;
+      justify-content: center;
       border-radius: 2rem;
       cursor: pointer;
+      @include media("<=tablet") {
+        border-radius: 1.5rem;
+        min-width: 4.5rem;
+        padding: 0;
+        margin-left: 0.5rem;
+      }
+      @include media("<=phone") {
+        min-width: 6rem;
+        margin-left: 1rem;
+      }
       .title {
         color: var(--text-inverted) !important;
       }

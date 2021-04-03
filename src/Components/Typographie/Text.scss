@@ -14,6 +14,14 @@
     font-size: 3rem;
     line-height: 3.5rem;
   }
+  @include media("<=tablet") {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  @include media("<=phone") {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 
 .page-subtitle {
@@ -24,6 +32,14 @@
   @include media("<=desktop") {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+  @include media("<=tablet") {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  @include media("<=phone") {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -54,6 +70,10 @@
     font-size: 0.95rem;
     line-height: 1.55rem;
   }
+  @include media("<=tablet") {
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+  }
 }
 .body-text {
   font-family: inherit;
@@ -65,6 +85,10 @@
     font-size: 1.15rem;
     line-height: 1.75rem;
   }
+  @include media("<=tablet") {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
 }
 .caption {
   font-family: inherit;
@@ -74,6 +98,10 @@
   opacity: 0.75;
   @include media("<=desktop") {
     font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  @include media("<=tablet") {
+    font-size: 0.675rem;
     line-height: 1rem;
   }
 }

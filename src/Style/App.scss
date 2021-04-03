@@ -38,6 +38,14 @@
       height: 100px;
       width: 100px;
     }
+    @include media("<=tablet") {
+      height: 85px;
+      width: 85px;
+    }
+    @include media("<=phone") {
+      height: 75px;
+      width: 75px;
+    }
 
     position: absolute;
     animation: 3s ease-in-out;
@@ -113,6 +121,10 @@
           &:last-child {
             top: 60%;
             left: 30%;
+            @include media("<=phone") {
+              top: 70%;
+              left: 15%;
+            }
 
             @include animation-keyframes {
               0% {
@@ -141,6 +153,9 @@
           &:first-child {
             top: 22.5%;
             right: 10.5%;
+            @include media("<=phone") {
+              right: 2.5%;
+            }
             @include animation-keyframes {
               0% {
                 opacity: 0.75;
@@ -156,6 +171,9 @@
           &:last-child {
             top: 65%;
             right: 45%;
+            @include media("<=phone") {
+              display: none;
+            }
             @include animation-keyframes {
               0% {
                 transform: rotate(20deg);
@@ -200,6 +218,9 @@
           @include media("<=desktop") {
             width: 80%;
           }
+          @include media("<=phone") {
+            width: 90%;
+          }
           .page-title {
             display: inline-block;
             z-index: 10;
@@ -215,6 +236,9 @@
           width: 57.5%;
           @include media("<=desktop") {
             width: 60%;
+          }
+          @include media("<=phone") {
+            width: 80%;
           }
           z-index: 6;
           .body-text {
@@ -260,6 +284,9 @@
           margin: 0 auto;
           text-align: center;
           min-width: 50%;
+          @include media("<=phone") {
+            max-width: 85%;
+          }
         }
         .signup-form-content {
           margin: 1rem 0 1rem 0;
@@ -282,6 +309,9 @@
               font-size: 1rem;
               line-height: 1.5rem;
             }
+            @include media("<=phone") {
+              width: 10rem;
+            }
           }
           .signup-form-submit {
             width: 9.5rem;
@@ -303,6 +333,9 @@
               height: 3rem;
               font-size: 1rem;
               line-height: 1.5rem;
+            }
+            @include media("<=phone") {
+              width: 7rem;
             }
             &:hover {
               background-color: var(--primary-400);
@@ -330,6 +363,9 @@
     height: 80vh;
     width: 100%;
     position: relative;
+    @include media("<=phone") {
+      height: 100vh;
+    }
     .pricing-inner {
       position: absolute;
       top: 0;
@@ -341,7 +377,7 @@
       align-items: flex-start;
       .pricing-showcase {
         z-index: 10;
-        width: 70%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -349,15 +385,23 @@
         .pricing-showcase-title {
           margin: 0 auto;
           text-align: center;
+          @include media("<=phone") {
+            width: 85%;
+          }
           // flex: 1;
         }
         .pricing-showcase-content {
           margin: 2rem 0;
           flex: 1;
-          width: 80%;
+          width: 56%;
           display: flex;
           align-items: center;
           justify-content: space-evenly;
+          @include media("<=phone") {
+            flex-direction: column;
+            width: 100%;
+            margin: 1rem 0;
+          }
           .pricing-showcase-section {
             height: 100%;
             max-height: 29rem;
@@ -377,6 +421,11 @@
             @include media("<=desktop") {
               max-height: 23rem;
             }
+            @include media("<=phone") {
+              margin: 0.5rem 0;
+              max-width: none;
+              width: 90%;
+            }
             .pricing-showcase-section-title {
               display: flex;
               justify-content: center;
@@ -394,15 +443,22 @@
               @include media("<=desktop") {
                 padding: 0 1rem;
               }
+              @include media("<=phone") {
+                padding: 0;
+                align-items: center;
+              }
               .title {
                 margin: 2px 0;
                 font-weight: 700;
                 opacity: 0.75;
+                @include media("<=phone") {
+                  margin: 2px 0;
+                }
                 &:first-child {
-                  margin-top: 4px;
+                  margin-top: 8px;
                 }
                 &:last-child {
-                  margin-bottom: 4px;
+                  margin-bottom: 8px;
                 }
               }
             }
@@ -464,6 +520,9 @@
           &:last-child {
             bottom: 15%;
             right: 7.5%;
+            @include media("<=phone") {
+              display: none;
+            }
             @include animation-keyframes {
               0% {
                 opacity: 0.75;
@@ -500,10 +559,16 @@
         height: 20%;
         .product-title {
           text-align: center;
+          @include media("<=phone") {
+            width: 90%;
+          }
         }
         .product-description {
           width: 65%;
           text-align: center;
+          @include media("<=phone") {
+            width: 90%;
+          }
         }
       }
     }
@@ -518,6 +583,9 @@
           position: absolute;
           top: 0;
           left: -5%;
+          @include media("<=phone") {
+            top: 10%;
+          }
         }
         &.top {
           position: absolute;
@@ -539,6 +607,18 @@
         .page-title {
           font-size: 3.5rem;
           line-height: 3.75rem;
+          @include media("<=desktop") {
+            font-size: 2.75rem;
+            line-height: 3.25rem;
+          }
+          @include media("<=tablet") {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+          }
+          @include media("<=phone") {
+            font-size: 1.75rem;
+            line-height: 2rem;
+          }
         }
       }
       .product-description {
@@ -550,6 +630,35 @@
         }
         &:nth-child(2) {
           margin-top: 1rem;
+        }
+
+        @include media("<=phone") {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+
+    @include media("<=phone") {
+      flex-direction: column;
+      .product-illustration,
+      .product-details {
+        width: 100%;
+        height: 70%;
+      }
+      .product-details {
+        height: 30%;
+        .product-title {
+          text-align: center;
+          @include media("<=phone") {
+            width: 90%;
+          }
+        }
+        .product-description {
+          width: 65%;
+          text-align: center;
+          @include media("<=phone") {
+            width: 90%;
+          }
         }
       }
     }
@@ -567,6 +676,9 @@
       .newsletter-form-title {
         text-align: center;
         margin: 1.5rem 0;
+        @include media("<=phone") {
+          width: 85%;
+        }
         .page-subtitle {
           color: var(--text-inverted);
           font-weight: 700;
@@ -589,6 +701,9 @@
           color: var(--text);
           opacity: 0.75;
           padding: 0 0 0 1rem;
+          @include media("<=phone") {
+            width: 10rem;
+          }
         }
         .newsletter-form-submit {
           width: 9.5rem;
@@ -605,6 +720,9 @@
           text-align: center;
           color: var(--text-inverted);
           cursor: pointer !important;
+          @include media("<=phone") {
+            width: 7rem;
+          }
           &:hover {
             background-color: var(--primary-400);
           }
@@ -623,6 +741,9 @@
       img {
         margin: 0;
         height: 100%;
+      }
+      @include media("<=phone") {
+        height: 30vh;
       }
     }
   }
@@ -704,11 +825,15 @@
           margin-top: -1.5rem;
           margin-bottom: 1.75rem;
         }
+        @include media("<=phone") {
+          flex: 2;
+        }
       }
       .footer-sections {
         flex: 2;
         height: 100%;
         display: flex;
+
         .footer-section {
           flex: 1;
           height: 100%;
